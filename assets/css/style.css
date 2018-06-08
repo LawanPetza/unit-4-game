@@ -1,0 +1,15 @@
+.crystal-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  body {
+    font-family: 'Neucha', cursive;
+    color: darkblue;
+    font-size: 20px;
+  }
+  h1 {
+      text-align: center;
+      color: darkred;
+  }
+  
