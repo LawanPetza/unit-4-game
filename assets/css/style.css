@@ -1,13 +1,24 @@
 .crystal-image {
     width: 200px;
     height: 200px;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: blue;
+
   }
 
   body {
     font-family: 'Neucha', cursive;
-    color: darkblue;
+    background-image: url(../images/background.jpg);
     font-size: 20px;
   }
+
+  li {
+
+    color: beige;
+    font-size: 20px;
+  }
+
   h1 {
       text-align: center;
       color: darkred;
