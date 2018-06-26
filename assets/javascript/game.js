@@ -2,14 +2,25 @@ $(document).ready(function () {
     var wins = 0;
     var losses = 0;
     // var userGuesses = 0;
-    var targetNumber = Math.floor(Math.random() * 101) + 19;
-    console.log(targetNumber)
-
-    $("#computerScore").append(targetNumber);
-    $("#wins").text(wins);
-    $("#losses").text(losses);
-
     var counter = 0;
+    var targetNumber = Math.floor(Math.random() * 101) + 19;
+
+    function startGame() {
+        // Initializes the targetNumber with each new game
+        targetNumber = Math.floor(Math.random() * 101) + 19;
+        console.log(targetNumber)
+        // Resets the counter to reach the target number at zero at the start of each game
+        counter = 0
+        $("#totalScore").text(counter);
+        // Show the user the target score
+        $("#computerScore").text(targetNumber);
+        // Update the user wins in the html
+        $("#wins").text(wins);
+        // Update the user losses in the html
+        $("#losses").text(losses);
+
+    }
+    startGame();
 
     function crystal() {
         var imageCrystal1 = $("<img>");
@@ -40,21 +51,30 @@ $(document).ready(function () {
     crystal();
 
     $(".crystal-image").on("click", function () {
-
+        $("#results").empty();
+        
         var crystalValue = ($(this).attr("data-crystalvalue"));
         crystalValue = parseInt(crystalValue);
         counter += crystalValue;
-        alert("New score: " + counter);
+
+        console.log(counter);
+        console.log(targetNumber)
+
+        // alert("New score: " + counter);
         $("#totalScore").text(counter);
 
         if (counter === targetNumber) {
-            alert("You win!");
+            $("#results").text("You Win!!!!")
             wins++;
+            startGame();
+            // If players wins the game, include a function that resets the game start parameters
         }
 
-        else if (counter >= targetNumber) {
-            alert("You lose!!");
+        else if (counter > targetNumber) {
+            $("#results").text("You Lose!!!!")
             losses++;
+            startGame();
+            // If player loses game, reset the game parameters
         }
 
     })
