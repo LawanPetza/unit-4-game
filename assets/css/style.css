@@ -26,5 +26,13 @@
   .container {
     margin-top: 10px;
   }
- 
+
+ #results {
+   text-align: center;
+   color: red;
+   font-size: 40px;
+   background-color: rgba(209, 133, 47, 0.2)
+ }
+
+
   
