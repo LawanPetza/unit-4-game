@@ -31,7 +31,10 @@
    text-align: center;
    color: red;
    font-size: 40px;
-   background-color: rgba(209, 133, 47, 0.2)
+   background-color: rgba(20, 3, 39, 0.596)
+ }
+ #game-score {
+  background-color: rgba(138, 14, 240, 0.61);
  }
 
 
