@@ -16,78 +16,130 @@
 
 <body>
     <div class="container">
-        <!-- <div class="jumbotron"> -->
-        <h1 class="display-4">CrystalsCollector!</h1>
-        <!-- <hr class="my-4"> -->
+        <div class="jumbotron">
+            <h1 class="text-center">Crystal Collector!</h1>
+        </div>
 
-        <!-- <div class="container"> -->
+
         <div class="row">
             <div id="game-intro" class="col-md-12">
-                <p>
-                    <ol>
-                        <li>You will be givien a random number at the start of the game.</li>
-                        <li>There are four crystals below. By clicking on a crystal you will add a specific amount of points
-                            to your total score.</li>
-                        <li>You win the game by matching your total score to random number, you lose the game if your total score
-                            goes above the random number.</li>
-                        <li>The value of each crystal is hidden from you until you click on it.</li>
-                        <li>Each time when the game starts, the game will change the values of each crystal.</li>
-                    </ol>
-                </p>
+
+                <div class="card">
+                    <div class="card-header text-center">
+                        Instruction
+                    </div>
+                    <div class="card-body">
+
+                        <p class="card-text">
+                            <ul>
+                                <li>You will be givien a random number at the start of the game.</li>
+                                <li>There are four crystals below. By clicking on a crystal you will add a specific amount of
+                                    points to your total score.</li>
+                                <li>You win the game by matching your total score to random number, you lose the game if your
+                                    total score goes above the random number.</li>
+                                <li>The value of each crystal is hidden from you until you click on it.</li>
+                                <li>Each time when the game starts, the game will change the values of each crystal.</li>
+                            </ul>
+
+                        </p>
+
+                    </div>
+                </div>
+
             </div>
         </div>
-        <!-- /</div> -->
+
     </div>
-
-
 
     <div class="container">
         <div class="row">
-            <div class="col-md-12 text-center">
+            <div class="col-md-12">
 
                 <h4 class="text-center" id="results"></h4>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div id="game-score" class="col-md-12 text-center">
-                    <p>
-                        <div class="text-white">Computer Desired Score :
-                            <span id="computerScore"></span>
-                        </div>
-                    </p>
+    </div>
 
-                    <p>
-                        <div class="text-white">Wins :
-                            <span id="wins"></span>
-                        </div>
-                    </p>
+    <div class="container">
+        <div class="row" id="game-score">
 
-                    <p>
-                        <div class="text-white">Losses :
-                            <span id="losses"></span>
-                        </div>
-                    </p>
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header text-center">
+                        Desired Score
+                    </div>
+                    <div class="card-body">
 
-                    <p>
-                        <div class="text-white">Your total score is :
-                            <span id="totalScore"></span>
-                        </div>
-                    </p>
+                        <p id="computerScore" class="card-text text-center"></p>
+
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div id="crystals" class="col-md-12 text-center">
+
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header text-center">
+                        Wins
+                    </div>
+                    <div class="card-body">
+
+                        <p id="wins" class="card-text text-center"></p>
+
+                    </div>
                 </div>
             </div>
+
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header text-center">
+                        Losses
+                    </div>
+                    <div class="card-body">
+
+                        <p id="losses" class="card-text text-center"></p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="card">
+                    <div class="card-header text-center">
+                        Your total score
+                    </div>
+                    <div class="card-body">
+
+                        <p id="totalScore" class="card-text text-center"></p>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
+    </div>
 
+    <div class="container">
+        <div class="row">
 
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/javascript/game.js">
-        </script>
+            <div class="col-md-12">
+                <div class="card">
+                        <div class="card-header text-center">
+                                Crystal Selection
+                            </div>
+
+                    <div id="crystals" class="card-body text-center">
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js">
+    </script>
 </body>
 
 </html>

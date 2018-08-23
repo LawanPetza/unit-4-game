@@ -1,27 +1,39 @@
 .crystal-image {
-    width: 200px;
-    height: 200px;
+    width: auto;
+    height: 100px;
     margin-right: 20px;
-    padding: 10px;
-    background-color: blue;
+    padding: 5px;
+    display: inline-block;
+    background-color: black;
 
   }
 
   body {
     font-family: 'Neucha', cursive;
     background-image: url(../images/background.jpg);
-    font-size: 20px;
+  }
+
+  .jumbotron {
+
+    background-color: rgb(70, 8, 16);
   }
 
   li {
-
-    color: beige;
-    font-size: 20px;
+    font-size: 15px;
   }
+
+  .card-header {
+
+    background-color: rgb(68, 68, 151);
+    color: whitesmoke;
+
+  }
+
+
 
   h1 {
       text-align: center;
-      color: darkred;
+      color: white;
   }
   .container {
     margin-top: 10px;
@@ -33,9 +45,9 @@
    font-size: 40px;
    background-color: rgba(20, 3, 39, 0.596)
  }
- #game-score {
+ /* #game-score {
   background-color: rgba(138, 14, 240, 0.61);
- }
+ } */
 
 
   
