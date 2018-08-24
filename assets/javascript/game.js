@@ -1,23 +1,30 @@
 $(document).ready(function () {
-    var wins = 0;
-    var losses = 0;
+    var winCount = 0;
+    var lossCount = 0;
     // var userGuesses = 0;
-    var counter = 0;
-    var targetNumber = Math.floor(Math.random() * 101) + 19;
+    var currentScore = 0;
+    var targetNumber = 0;
+
+    //FUNCTIONS----------------------------------------------------------
+
+    var getRandom = function(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
 
     function startGame() {
         // Initializes the targetNumber with each new game
-        targetNumber = Math.floor(Math.random() * 101) + 19;
+        targetNumber = getRandom(19, 120)
         console.log(targetNumber)
-        // Resets the counter to reach the target number at zero at the start of each game
-        counter = 0
-        $("#totalScore").text(counter);
+
+        // Resets the currentScore to reach the target number at zero at the start of each game
+        currentScore = 0
+        $("#totalScore").text(currentScore);
         // Show the user the target score
         $("#computerScore").text(targetNumber);
-        // Update the user wins in the html
-        $("#wins").text(wins);
-        // Update the user losses in the html
-        $("#losses").text(losses);
+        // Update the user winCount in the html
+        $("#wins").text(winCount);
+        // Update the user lossCount in the html
+        $("#losses").text(lossCount);
 
     }
     startGame();
@@ -26,25 +33,25 @@ $(document).ready(function () {
         var imageCrystal1 = $("<img>");
         imageCrystal1.addClass("crystal-image");
         imageCrystal1.attr("src", "assets/images/Crystal-1.jpg");
-        imageCrystal1.attr("data-crystalvalue", Math.floor(Math.random() * 11) + 1);
+        imageCrystal1.attr("data-crystalvalue", getRandom(1, 12));
         $("#crystals").append(imageCrystal1);
 
         var imageCrystal2 = $("<img>");
         imageCrystal2.addClass("crystal-image");
         imageCrystal2.attr("src", "assets/images/Crystal-2.jpg");
-        imageCrystal2.attr("data-crystalvalue", Math.floor(Math.random() * 11) + 1);
+        imageCrystal2.attr("data-crystalvalue", getRandom(1, 12));
         $("#crystals").append(imageCrystal2);
 
         var imageCrystal3 = $("<img>");
         imageCrystal3.addClass("crystal-image");
         imageCrystal3.attr("src", "assets/images/Crystal-3.jpg");
-        imageCrystal3.attr("data-crystalvalue", Math.floor(Math.random() * 11) + 1);
+        imageCrystal3.attr("data-crystalvalue", getRandom(1, 12));
         $("#crystals").append(imageCrystal3);
 
         var imageCrystal4 = $("<img>");
         imageCrystal4.addClass("crystal-image");
         imageCrystal4.attr("src", "assets/images/Crystal-4.jpg");
-        imageCrystal4.attr("data-crystalvalue", Math.floor(Math.random() * 11) + 1);
+        imageCrystal4.attr("data-crystalvalue", getRandom(1, 12));
         $("#crystals").append(imageCrystal4);
     }
 
@@ -55,24 +62,25 @@ $(document).ready(function () {
         
         var crystalValue = ($(this).attr("data-crystalvalue"));
         crystalValue = parseInt(crystalValue);
-        counter += crystalValue;
+        currentScore += crystalValue;
 
-        console.log(counter);
-        console.log(targetNumber)
+        // console.log(currentScore);
+        // console.log(targetNumber)
+        // console.log(crystalValue);
 
-        // alert("New score: " + counter);
-        $("#totalScore").text(counter);
+        // alert("New score: " + currentScore);
+        $("#totalScore").text(currentScore);
 
-        if (counter === targetNumber) {
-            $("#results").text("You Win!!!!")
-            wins++;
+        if (currentScore === targetNumber) {
+            alert("Congratulations! You Won!")
+            winCount++;           
             startGame();
-            // If players wins the game, include a function that resets the game start parameters
+            // If players winCount the game, include a function that resets the game start parameters
         }
 
-        else if (counter > targetNumber) {
-            $("#results").text("You Lose!!!!")
-            losses++;
+        else if (currentScore > targetNumber) {
+            alert("Sorry! You lost!")
+            lossCount++;
             startGame();
             // If player loses game, reset the game parameters
         }

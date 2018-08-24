@@ -1,9 +1,8 @@
 .crystal-image {
     width: auto;
     height: 100px;
-    margin-right: 20px;
+    margin: 20px;
     padding: 5px;
-    display: inline-block;
     background-color: black;
 
   }
@@ -39,15 +38,13 @@
     margin-top: 10px;
   }
 
- #results {
+ /* #results {
    text-align: center;
    color: red;
    font-size: 40px;
    background-color: rgba(20, 3, 39, 0.596)
- }
- /* #game-score {
-  background-color: rgba(138, 14, 240, 0.61);
  } */
+ 
 
 
   

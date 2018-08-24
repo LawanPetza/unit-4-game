@@ -10,27 +10,29 @@
         crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="assets/css/style.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Neucha" rel="stylesheet">
-
 </head>
 
 <body>
     <div class="container">
+
+        <!--Crystal Collector Jumbotron-->
         <div class="jumbotron">
-            <h1 class="text-center">Crystal Collector!</h1>
+            <div class="container">
+                <h1 class="text-center">
+                    <strong> Crystal Collector!</strong>
+                </h1>
+            </div>
         </div>
 
-
+        <!--Instructions-->
         <div class="row">
             <div id="game-intro" class="col-md-12">
-
-                <div class="card">
-                    <div class="card-header text-center">
-                        Instruction
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h4 class="card-title text-center">Instructions</h4>
                     </div>
                     <div class="card-body">
-
-                        <p class="card-text">
+                        <p>
                             <ul>
                                 <li>You will be givien a random number at the start of the game.</li>
                                 <li>There are four crystals below. By clicking on a crystal you will add a specific amount of
@@ -40,101 +42,85 @@
                                 <li>The value of each crystal is hidden from you until you click on it.</li>
                                 <li>Each time when the game starts, the game will change the values of each crystal.</li>
                             </ul>
-
                         </p>
-
                     </div>
                 </div>
-
             </div>
         </div>
 
-    </div>
-
-    <div class="container">
+        <!--Results-->
         <div class="row">
             <div class="col-md-12">
 
                 <h4 class="text-center" id="results"></h4>
             </div>
         </div>
-    </div>
-
-    <div class="container">
+        
+        
         <div class="row" id="game-score">
 
+            <!--Target Score-->
             <div class="col-sm-3">
-                <div class="card">
-                    <div class="card-header text-center">
-                        Desired Score
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h4 class="card-title text-center">Target Score</h4>
                     </div>
                     <div class="card-body">
-
-                        <p id="computerScore" class="card-text text-center"></p>
-
+                        <h4 id="computerScore" class="card-text text-center"></h4>
                     </div>
                 </div>
             </div>
 
+            <!--Win Count-->
             <div class="col-sm-3">
-                <div class="card">
-                    <div class="card-header text-center">
-                        Wins
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h4 class="card-title text-center">Win Count</h4>
                     </div>
                     <div class="card-body">
-
-                        <p id="wins" class="card-text text-center"></p>
-
+                        <h4 id="wins" class="card-text text-center"></h4>
                     </div>
                 </div>
             </div>
 
+            <!--Loss Count-->
             <div class="col-sm-3">
-                <div class="card">
-                    <div class="card-header text-center">
-                        Losses
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h4 class="card-title text-center">Loss Count</h4>
                     </div>
                     <div class="card-body">
-
-                        <p id="losses" class="card-text text-center"></p>
-
+                        <h4 id="losses" class="card-text text-center"></h4>
                     </div>
                 </div>
             </div>
 
+        <!--Your Score-->
             <div class="col-sm-3">
-                <div class="card">
-                    <div class="card-header text-center">
-                        Your total score
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h4 class="card-title text-center">Your Score</h4>
                     </div>
                     <div class="card-body">
-
-                        <p id="totalScore" class="card-text text-center"></p>
-
+                        <h4 id="totalScore" class="card-text text-center"></h4>
                     </div>
                 </div>
             </div>
-
         </div>
-    </div>
 
-    <div class="container">
+        <!--Crystals-->
         <div class="row">
-
             <div class="col-md-12">
-                <div class="card">
-                        <div class="card-header text-center">
-                                Crystal Selection
-                            </div>
-
-                    <div id="crystals" class="card-body text-center">
-
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h4 class="card-title text-center">Crystal Selection</h4>
                     </div>
-
+                    <div id="crystals" class="card-body text-center">
+                    </div>
                 </div>
             </div>
-
         </div>
+
     </div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
